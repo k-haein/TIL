@@ -25,3 +25,4 @@ git push origin
 
 ## 업무 관련
 * [DRM이란](./업무지식/DRM.md)
+* [poi이란](./업무지식/poi.md)

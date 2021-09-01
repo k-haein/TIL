@@ -23,6 +23,10 @@ git push origin
  -->
 
 
+
+* [Git contribution 그래프 채우기](./Git_contribution.md)
+
+
 ## 업무 관련
 * [DRM이란](./업무지식/DRM.md)
 * [poi이란](./업무지식/poi.md)

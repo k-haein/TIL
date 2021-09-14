@@ -168,7 +168,6 @@ id는 root이다. 여기가 바로 근-본이라는 뜻(...)
 뭔지는 모르겠지만 index.js 안에는 React가 import 되어있고, react-DOM이라는 익숙한 말의 DOM이 있고, App이 import 된다. 
 
 <code> 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

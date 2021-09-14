@@ -39,7 +39,6 @@ git pull origin
     + [웹접근성](./업무지식/웹접근성.md)
     + [컴퓨터 구조](./업무지식/컴퓨터구조.md)
     + [JSON HAL](./업무지식/JSON_HAL.md)
-    + [](./업무지식/MultiPartRequest.md)
     + [spring-boot](./업무지식/spring-boot.md)
     + [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
     + [DOCTYPE](./업무지식/DOCTYPE.md)
@@ -53,4 +52,10 @@ git pull origin
 * [공부계획](./트위터_클론코딩/계획.md)
 * [0-1. 기초셋팅](./트위터_클론코딩/셋팅.md)
 * [0-2. 기본지식](./트위터_클론코딩/기본지식.md)
-* [1. react 시작하기](./트위터_클론코딩/create_react_app.md)
+1. create react app
+    + [1. react 실행](./트위터_클론코딩/react_실행.md)
+    + [2. github 연동](./트위터_클론코딩/github_연동.md)
+    + [3. 실행해보기](./트위터_클론코딩/실행해보기.md)
+    + [4. SPA](./트위터_클론코딩/SPA.md)
+2. jsx
+    + [1. react_component](./트위터_클론코딩/react_component.md)

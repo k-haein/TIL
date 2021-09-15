@@ -59,3 +59,4 @@ git pull origin
     + [4. SPA](./트위터_클론코딩/SPA.md)
 2. jsx
     + [1. react_component](./트위터_클론코딩/react_component.md)
+    + [2. Dynamic_Component](./트위터_클론코딩/Dynamic_Component.md)

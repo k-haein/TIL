@@ -30,6 +30,16 @@ map이라는 것이 나온다. map은 array -> array를 보내는 것.
 대충 props => 결과 니까 어렵게 생각하지 말자.
 
 
+리턴값에는 우리가 사용했던 <Food name = {~} /> 등을 사용할 수 있다.
+
+<code> {foodLike.map(dish => <
+Food name ={dish.name} />)} </code>
+ 
+이렇게 하면 배열에 있는 것을 dish라는 인자가 key값을 담고, 그에 따른 value값을 Food라는 함수의 이름값에 알아서 넣어줘서 값이 들어간다. 
+
+Food는 어제처럼 리턴값에 I Like {favorite} 가 들어있으니 알아서 dish에 담긴 foodLike 데이터가 key가 되고 그 value값이 favorite에 들어간다.
+
+결론은 key값과 value를 분리해서 각각 인자별로 넣어주는 역할을 map이 하고 반복문을 안써도 알아서 랜더링 된다는 것!
 
 
 <!-- 2021.09.15-->

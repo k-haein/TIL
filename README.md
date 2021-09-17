@@ -34,7 +34,9 @@ git pull origin
 ## 업무 관련
 * [DRM이란](./업무지식/DRM.md)
 * [poi이란](./업무지식/poi.md)
-    + [MultiPartRequest](./업무지식/MultiPartRequest.md)
+* [MultiPartRequest](./업무지식/MultiPartRequest.md)
+* [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
+* [MIME타입](./업무지식/MimeType.md)
     + [SA인증](./업무지식/SA인증.md)
     + [웹접근성](./업무지식/웹접근성.md)
     + [컴퓨터 구조](./업무지식/컴퓨터구조.md)

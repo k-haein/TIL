@@ -29,6 +29,7 @@ git pull origin
  -->
 
 * [Git contribution 그래프 채우기](./Git_contribution.md)
+* 맥북 개발자도구(F12) : [option + command + i]
 
 
 ## 업무 관련
@@ -37,15 +38,19 @@ git pull origin
 * [MultiPartRequest](./업무지식/MultiPartRequest.md)
 * [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
 * [MIME타입](./업무지식/MimeType.md)
-    + [SA인증](./업무지식/SA인증.md)
-    + [웹접근성](./업무지식/웹접근성.md)
-    + [컴퓨터 구조](./업무지식/컴퓨터구조.md)
-    + [JSON HAL](./업무지식/JSON_HAL.md)
-    + [spring-boot](./업무지식/spring-boot.md)
-    + [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
-    + [DOCTYPE](./업무지식/DOCTYPE.md)
-    + [e.printStackTrace();](./업무지식/e.printStackTrace();.md)
-    + [IO](./업무지식/IO.md)
+
+<br>
+예정
+
+* [SA인증](./업무지식/SA인증.md)
+* [웹접근성](./업무지식/웹접근성.md)
+* [컴퓨터 구조](./업무지식/컴퓨터구조.md)
+* [JSON HAL](./업무지식/JSON_HAL.md)
+* [spring-boot](./업무지식/spring-boot.md)
+* [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
+* [DOCTYPE](./업무지식/DOCTYPE.md)
+* [e.printStackTrace();](./업무지식/e.printStackTrace();.md)
+* [IO](./업무지식/IO.md)
 
 
     
@@ -62,3 +67,4 @@ git pull origin
 2. jsx
     + [1. react_component](./트위터_클론코딩/react_component.md)
     + [2. Dynamic_Component](./트위터_클론코딩/Dynamic_Component.md)
+    + [3. map_recap](./트위터_클론코딩/map_recap.md)

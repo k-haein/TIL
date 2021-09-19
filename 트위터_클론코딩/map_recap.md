@@ -1,6 +1,6 @@
 
 # 2. jsx
-## 3. map_recap
+## 3) map_recap
 
 우리는 화면에  
 
@@ -82,14 +82,6 @@ function App() {
 
 export default App;
 </pre>
-
-
-------------
-
-
-
-
-
 
 
 

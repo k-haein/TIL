@@ -1,6 +1,8 @@
 
 # 2. jsx
-## 1. react Component
+## 1) react Component
+
+
 ### 1) react Component
 
 컴포넌트(Component)란 프로그래밍에 있어 재사용이 가능한 각각의 독립된 모듈을 뜻한다.

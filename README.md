@@ -64,7 +64,11 @@ git pull origin
     + [2. github 연동](./트위터_클론코딩/github_연동.md)
     + [3. 실행해보기](./트위터_클론코딩/실행해보기.md)
     + [4. SPA](./트위터_클론코딩/SPA.md)
-2. jsx
+2. jsx(component) / map / props, prop-types
     + [1. react_component](./트위터_클론코딩/react_component.md)
     + [2. Dynamic_Component](./트위터_클론코딩/Dynamic_Component.md)
     + [3. map_recap](./트위터_클론코딩/map_recap.md)
+    + [4. prop-types](./트위터_클론코딩/prop-types.md)
+    + [etc. FoodList 예제.js](./트위터_클론코딩/FoodList_App.js)
+3. State
+    + [1. Class Components and State(미완)](./트위터_클론코딩/State.md)

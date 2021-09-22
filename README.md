@@ -71,4 +71,8 @@ git pull origin
     + [4. prop-types](./트위터_클론코딩/prop-types.md)
     + [etc. FoodList 예제.js](./트위터_클론코딩/FoodList_App.js)
 3. State
-    + [1. Class Components and State(미완)](./트위터_클론코딩/State.md)
+    + [1. Class Components](./트위터_클론코딩/Class_Components.md)
+    + [2. setState](./트위터_클론코딩/setState.md)
+    + [3. life cycle method](./트위터_클론코딩/life_cycle_method.md)
+4. 무비앱 만들기
+    + [1. fetch](./트위터_클론코딩/fetch.md)

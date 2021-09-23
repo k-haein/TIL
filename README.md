@@ -76,3 +76,6 @@ git pull origin
     + [3. life cycle method](./트위터_클론코딩/life_cycle_method.md)
 4. 무비앱 만들기
     + [1. fetch](./트위터_클론코딩/fetch.md)
+    + [2. github.io 연결](./트위터_클론코딩/github_io.md)
+    + [etc. MovieList_App.js](./트위터_클론코딩/MovieList_App.js)
+    + [etc. MovieList_Movie.js](./트위터_클론코딩/MovieList_Movie.js)

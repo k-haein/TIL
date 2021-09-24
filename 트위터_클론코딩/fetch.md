@@ -34,6 +34,8 @@ render() => componentDidMount() 로 랜더링 후 바로 실행되는 곳에 set
 fetch는 어디있는지 이미 아는 상태로 가서 말그대로 가져온다는 뜻이다.
 
 
+
+
 ## 2) 데이터를 가져오자.
 
 axios를 쓸 것이다. 이건 fetch 위에 있는 작은 layer이다.

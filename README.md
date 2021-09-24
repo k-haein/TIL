@@ -55,28 +55,31 @@ git pull origin
 
     
 
-## 트위터 클론코딩
-* [공부계획](./트위터_클론코딩/계획.md)
-* [0-1. 기초셋팅](./트위터_클론코딩/셋팅.md)
-* [0-2. 기본지식](./트위터_클론코딩/기본지식.md)
+## React 무비리스트 만들기
+* [공부계획](./React_MovieList/계획.md)
+* [0-1. 기초셋팅](./React_MovieList/셋팅.md)
+* [0-2. 기본지식](./React_MovieList/기본지식.md)
 1. create react app
-    + [1. react 실행](./트위터_클론코딩/react_실행.md)
-    + [2. github 연동](./트위터_클론코딩/github_연동.md)
-    + [3. 실행해보기](./트위터_클론코딩/실행해보기.md)
-    + [4. SPA](./트위터_클론코딩/SPA.md)
+    + [1. react 실행](./React_MovieList/react_실행.md)
+    + [2. github 연동](./React_MovieList/github_연동.md)
+    + [3. 실행해보기](./React_MovieList/실행해보기.md)
+    + [4. SPA](./React_MovieList/SPA.md)
 2. jsx(component) / map / props, prop-types
-    + [1. react_component](./트위터_클론코딩/react_component.md)
-    + [2. Dynamic_Component](./트위터_클론코딩/Dynamic_Component.md)
-    + [3. map_recap](./트위터_클론코딩/map_recap.md)
-    + [4. prop-types](./트위터_클론코딩/prop-types.md)
-    + [etc. FoodList 예제.js](./트위터_클론코딩/FoodList_App.js)
+    + [1. react_component](./React_MovieList/react_component.md)
+    + [2. Dynamic_Component](./React_MovieList/Dynamic_Component.md)
+    + [3. map_recap](./React_MovieList/map_recap.md)
+    + [4. prop-types](./React_MovieList/prop-types.md)
+    + [etc. FoodList 예제.js](./React_MovieList/FoodList_App.js)
 3. State
-    + [1. Class Components](./트위터_클론코딩/Class_Components.md)
-    + [2. setState](./트위터_클론코딩/setState.md)
-    + [3. life cycle method](./트위터_클론코딩/life_cycle_method.md)
+    + [1. Class Components](./React_MovieList/Class_Components.md)
+    + [2. setState](./React_MovieList/setState.md)
+    + [3. life cycle method](./React_MovieList/life_cycle_method.md)
 4. 무비앱 만들기
-    + [1. fetch](./트위터_클론코딩/fetch.md)
-    + [2. github.io 연결](./트위터_클론코딩/github_io.md)
-    + [etc. MovieList_App.js](./트위터_클론코딩/MovieList_App.js)
-    + [etc. MovieList_Movie.js](./트위터_클론코딩/MovieList_Movie.js)
-    + [plus.추가강의](./트위터_클론코딩/PlusLecture.md)
+    + [1. fetch](./React_MovieList/fetch.md)
+    + [2. github.io 연결](./React_MovieList/github_io.md)
+    + [etc. MovieList_App.js](./React_MovieList/MovieList_App.js)
+    + [etc. MovieList_Movie.js](./React_MovieList/MovieList_Movie.js)
+    + [plus.추가강의](./React_MovieList/PlusLecture.md)
+
+
+## 트위터 클론코딩

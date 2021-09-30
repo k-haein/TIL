@@ -17,7 +17,7 @@ github 연동이 되는지는 VSC 터미널에 다음과 같이 입력해보면 
 
 VSC 터미널로 와서 연결해주자.(리액트 실행 창 말고 터미널을 분할해서 실행해주자.)
 
-> add origin 깃주소
+> git remote add origin 새 레퍼지토리 주소
 
  이제 저장한 것들을 전부 넣고 commit 해준다.
 

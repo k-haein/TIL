@@ -38,7 +38,7 @@ git pull origin
 * [MultiPartRequest](./업무지식/MultiPartRequest.md)
 * [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
 * [MIME타입](./업무지식/MimeType.md)
-* [  ](./업무지식/x.md)
+* [](./업무지식/x.md)
 
 <br>
 예정

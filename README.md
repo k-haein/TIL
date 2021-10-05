@@ -38,7 +38,11 @@ git pull origin
 * [MultiPartRequest](./업무지식/MultiPartRequest.md)
 * [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
 * [MIME타입](./업무지식/MimeType.md)
+<<<<<<< HEAD
 * [공수산정](./업무지식/공수산정.md)
+=======
+* [ ß](./업무지식/x.md)
+>>>>>>> 795121578556279bcda84d9c71110b06f1928c85
 
 <br>
 예정

@@ -38,21 +38,15 @@ git pull origin
 * [MultiPartRequest](./업무지식/MultiPartRequest.md)
 * [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
 * [MIME타입](./업무지식/MimeType.md)
-<<<<<<< HEAD
 * [공수산정](./업무지식/공수산정.md)
-=======
-* [ ß](./업무지식/x.md)
->>>>>>> 795121578556279bcda84d9c71110b06f1928c85
-
+* [SA인증](./업무지식/SA인증.md)
+* [웹접근성](./업무지식/웹접근성.md)
 <br>
 예정
 
-* [SA인증](./업무지식/SA인증.md)
-* [웹접근성](./업무지식/웹접근성.md)
 * [컴퓨터 구조](./업무지식/컴퓨터구조.md)
 * [JSON HAL](./업무지식/JSON_HAL.md)
 * [spring-boot](./업무지식/spring-boot.md)
-* [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
 * [DOCTYPE](./업무지식/DOCTYPE.md)
 * [e.printStackTrace();](./업무지식/e.printStackTrace();.md)
 * [IO](./업무지식/IO.md)

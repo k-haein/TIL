@@ -57,6 +57,7 @@ git pull origin
 
 * [컴퓨터 구조](./업무지식/컴퓨터구조.md)
 * [SSL](./업무지식/SSL.md)
+* [DNS](./업무지식/DNS.md)
 * [JSON HAL](./업무지식/JSON_HAL.md)
 * [spring-boot](./업무지식/spring-boot.md)
 * [DOCTYPE](./업무지식/DOCTYPE.md)

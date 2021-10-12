@@ -64,7 +64,7 @@ git pull origin
 * [JSON HAL](./업무지식/JSON_HAL.md)
 * [spring-boot](./업무지식/spring-boot.md)
 * [DOCTYPE](./업무지식/DOCTYPE.md)
-* [e.printStackTrace();](./업무지식/e.printStackTrace();.md)
+* [e.printStackTrace();](./업무지식/printStackTrace.md)
 * [IO](./업무지식/IO.md)
 
 </details>

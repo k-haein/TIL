@@ -13,13 +13,28 @@ arr1	        arr2	         return
 */
 
 //내 답변
-
+function solution(arr1, arr2) {
+    var answer = [];
+    
+for(let i=0; i<arr1.length; i++){ 
+    let ans = []; 
+    for(let j=0; j<arr1[i].length; j++){ 
+        ans.push(arr1[i][j] + arr2[i][j]) 
+    } 
+    answer.push(ans);
+}
+    return answer;
+}
 
 
 
 
 /*
 문제풀이
+
+1. j 부분에서 arr1과 arr2의 모양을 잡아준다. 이를 더해서 return 하므로 push 해주는 것.
+2. 해당 ans까지는 첫번째 줄만 더한거다. 이게 두줄이니까 또 arr1 길이만큼 반복해주는 것.
+3. 그 ans를 다시 answer에 push해준다.
 */
 
 

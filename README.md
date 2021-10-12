@@ -48,6 +48,7 @@ git pull origin
 * [공수산정](./업무지식/공수산정.md)
 * [SA인증](./업무지식/SA인증.md)
 * [웹접근성](./업무지식/웹접근성.md)
+* [e.printStackTrace();](./업무지식/printStackTrace.md)
 
 
 * [크로미움 기반](./업무지식/크로미움.md)
@@ -64,7 +65,6 @@ git pull origin
 * [JSON HAL](./업무지식/JSON_HAL.md)
 * [spring-boot](./업무지식/spring-boot.md)
 * [DOCTYPE](./업무지식/DOCTYPE.md)
-* [e.printStackTrace();](./업무지식/printStackTrace.md)
 * [IO](./업무지식/IO.md)
 
 </details>
@@ -125,12 +125,12 @@ git pull origin
 
 <!-- <summary>JS Level 1</summary> -->
 
-+ [직사각형 별찍기](./프로그래머스/JS_Level1/직사각형_별찍기.md)([링크](https://programmers.co.kr/learn/courses/30/lessons/12969))
++ [직사각형 별찍기](./프로그래머스/JS_Level1/직사각형_별찍기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12969))
 
-+ [x만큼 간격이 있는 n개의 숫자](./프로그래머스/JS_Level1/x간격.md)([링크](https://programmers.co.kr/learn/courses/30/lessons/12954))
++ [x만큼 간격이 있는 n개의 숫자](./프로그래머스/JS_Level1/x간격.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12954))
 
 
-+ [행렬의 덧셈](./프로그래머스/JS_Level1/행렬의덧셈.md)([링크](https://programmers.co.kr/learn/courses/30/lessons/12950))
++ [행렬의 덧셈](./프로그래머스/JS_Level1/행렬의덧셈.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12950))
 
 
 <!-- </details> -->

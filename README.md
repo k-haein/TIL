@@ -40,6 +40,7 @@ git pull origin
 <details markdown="1">
 <summary>업무 지식</summary>
 
+* [화면 덤프 추출 방법](./업무지식/덤프.md)
 * [DRM이란](./업무지식/DRM.md)
 * [poi이란](./업무지식/poi.md)
 * [MultiPartRequest](./업무지식/MultiPartRequest.md)

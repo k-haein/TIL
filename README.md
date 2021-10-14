@@ -133,6 +133,8 @@ git pull origin
 
 + [행렬의 덧셈](./프로그래머스/JS_Level1/행렬의덧셈.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12950))
 
++ [핸드폰 번호 가리기](./프로그래머스/JS_Level1/핸드폰번호.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12948))
+
 
 <!-- </details> -->
 

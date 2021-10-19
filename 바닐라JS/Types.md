@@ -157,8 +157,8 @@ const player = {
     point : 1212,
     age : 26
 }
-console.log(palyer.age) //26
-console.log(palyer["age"]) //26
+console.log(player.age) //26
+console.log(player["age"]) //26
 </pre>
 
 이렇게 출력할 수 있다. 출력은 점을 찍어서 할 수도 있고, 해당 object에 있는 key값을 문자열로 가져와서 할 수도 있다.
@@ -171,7 +171,22 @@ const로 변수를 선언했지만 바뀌는 것이 object 속의 값들 뿐이�
 
 이처럼 없던 key값을 만들고 그 값도 바로 넣어서 사용할 수도 있다.
 
+### *** 참고) MDN에서 정의하고 있는 Property
 
+
+property는 해당 object의 특징입니다. property는 보통 데이터 구조와 연관된 속성을 나타냅니다. property에는 2가지 종류가 있습니다. 
+
+- 인스턴스 property들은 특정 object 인스턴스의 특정한 데이터를 가지고 있습니다. 
+- Static Property들은 모든 object 인스턴스들에게 공유 된 데이터를 가지고 있습니다. 
+
+property는 이름(a string)과 값(primitive, method 또는 object reference). 보통 "프로퍼티가 object를 가지고 있다"라고 말하는 것은 "property가 object reference"를 가지고 있다는 것을 줄여서 말한 것이라는 것을 기억하세요. property의 값이 변한 후에도 object는 그대로 남아있기 때문에 이걸 구분하는 것은 중요합니다.
+
+
+## Quiz 2
+1. object의 어떤 값(property)을 꺼내는 법 2가지 : xx.aa 그리고 xx["aa"]
+2. 배열에서 값을 꺼낼 때는 0부터 센다.
+3. 배열은 값을 구조적으로 리스트화 하기 위해 쓴다.
+4. const는 변하지 않는 값, let는 변하는 값.
 
 ## Function
 

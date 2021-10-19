@@ -142,4 +142,4 @@ git pull origin
 
 ## 바닐라JS
 + [1. Intro](./바닐라JS/intro.md)
-+ 
++ [2. 다양한 Type들](./바닐라JS/Types.md)

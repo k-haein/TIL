@@ -265,6 +265,48 @@ const result = calc(age); //28
 console.log(result);
 </pre>
 
+## Conditionals : 조건문
+
+parseInt를 써서 문자열을 숫자로 바꿀 수 있다.
+
+우리는 input에 들어오는 문자가 숫자가 아니면(NaN), 실행을 하는 조건문을 만들어볼 것이다.
+
+이를 간단하게 isNaN 이라는 함수로 확인해볼 수 있다.
+
+prompt 화면에 질문을 주고 답변을 받아 age에 넣는다. 그리고 이는 숫자로 변환한다.
+
+> const age = parseInt(prompt("How old are you?")); 
+
+isNaN은 들어온 값이 NaN인지 아닌지를 true, false로 알려준다.
+
+> console.log(isNaN(age)); 
+
+![image](https://user-images.githubusercontent.com/75053256/138406377-6f6c9840-3ecf-4ccf-bc71-ec5345fbcc75.png)
+
+이를 콘솔에서 찍어볼 수도 있지만, 조건문을 통해 간단하게 확인할 수 있다.
+<pre>
+if(조건 : condition) {
+    //조건이 true 일 때
+}else{
+    //조건이 false 일 때
+}
+</pre>
+if(여기) 에 방금 설정한 조건을 넣어주면 조건문이 된다. isNaN은 true,false를 출력하기 때문이다.
+
+- AND 와 OR (교집합과 합집합)
+
+&& : AND 연산자는 양쪽 다 true여야 결과가 true가 된다. 앞에꺼가 false면 바로 그냥 false로 출력된다. 오른쪽을 보지도 않는다.
+
+|| : OR 연산자는 한쪽만 ture여도 결과가 true가 된다. 앞에꺼가 false면 오른쪽의 값에 따라 리턴값이 결정된다.
+<br><br>
+문자열이 있는 경우, 문자열은 기본적으로 빈 값이 아니라면 true로 리턴된다.
+
+&& : 문자열은 ture이므로 앞에 위치하던 뒤에 위치하던 왼쪽이 중요하다. 만약 양쪽 다 문자열이면 true && "문자열" 이므로 문자열이 리턴된다.
+
+|| : 문자열은 ture이며, 왼쪽에 위치하면 true로 리턴된다.(오른쪽을 보지 않음) 만약 뒤에 있다면(앞이 false라면) 문자열이 리턴된다. 양쪽에 있는 경우 왼쪽의 문자열이 출력된다.
+
+![image](https://user-images.githubusercontent.com/75053256/138412465-0fc5ef21-bc48-4e2d-a3cd-e755c1fd13f7.png)
+
 
 ## Recap(요약)
 ### 1. Basic Type : typeof 로 확인 가능한

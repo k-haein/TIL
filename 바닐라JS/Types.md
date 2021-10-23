@@ -206,7 +206,7 @@ sayHello();
 
 해당 함수가 실행되어 alert창이 발생한다.
 
-만약 함수 속 또다른 함수 기능에서 값을 변경하고 싶다면, 인자가 필요하다.
+만약 함수 속 또다른 함수 기능에서 값을 변경하고 싶다면, 인자(arguments)가 필요하다.
 
 데이터가 필요하다면 소괄호에 아무 이름을 넣어서 sayHello로 간 첫번째 변수를 화면에 차례로 띄운다.
 
@@ -222,8 +222,150 @@ sayHello("nico",26);
 
 순서가 중요한데, 외부의 변수는 쓰여진 차례대로 함수의 인자값(arguments)에 들어가고, 함수 내부에서 그 인자값의 이름과 동일한 곳으로 도착한다.
 
-## Recap
- 
+즉, 위의 예제에서는 nico가 name에 들어가고, 26이 age에 순서대로 들어가는 것.
+
+여기까지 함수를 만드는 방법은 다음과 같다.
+
+<pre>
+fuction 함수명 (인자값들){
+    함수가 시행할 것;
+}
+
+함수명(여러값들); //인자값으로 순서대로 들어감.
+</pre>
+
+이는 외부에서 함수명으로 여러 인자만 추가해서 함수의 기능을 사용하는 것이다.
+
+함수는 항상 밖에서만 선언되지 않는다. 위의 object 예제처럼 property를 두어 사용자 지정의 xx.xx를 만들고, 그 내부에 함수를 사용할 수도 있다.
+
+<pre>
+const player = {
+    name = "nico",
+    age = 26,
+    sayHello : function(otherPersonsName){
+        console.log("Hello" + otherPersonsName + "nice to meet you!");
+    };
+};
+player.sayHello("kim");
+</pre>
+
+이처럼 object 구조로 player라는 사용자 지정의 xx.xx를 만들었고, 그 property로 sayHello 함수를 두었다.
+
+위에랑 사용 방법은 같다. 외부에서 인자가 들어오면 player 안에 있는 sayHello로 들어가고, 첫번째 인자인 otherPersonsName에서 이를 받아 함수 내부의 변수에 전달 후 console.log를 실행한다.
+
+## return
+함수 실행을 그 자리에서 멈추고 값을 호출 지점으로 반환한다.
+즉, 그 함수의 결과값은 return에서 나오는 값이며, 외부에서 함수를 호출한 자리로 값을 반환한다.
+<pre>
+const age = 26;
+funcion calc(a){
+    return a + 2;
+}
+const result = calc(age); //28
+console.log(result);
+</pre>
+
+## Conditionals : 조건문
+
+parseInt를 써서 문자열을 숫자로 바꿀 수 있다.
+
+우리는 input에 들어오는 문자가 숫자가 아니면(NaN), 실행을 하는 조건문을 만들어볼 것이다.
+
+이를 간단하게 isNaN 이라는 함수로 확인해볼 수 있다.
+
+prompt 화면에 질문을 주고 답변을 받아 age에 넣는다. 그리고 이는 숫자로 변환한다.
+
+> const age = parseInt(prompt("How old are you?")); 
+
+isNaN은 들어온 값이 NaN인지 아닌지를 true, false로 알려준다.
+
+> console.log(isNaN(age)); 
+
+![image](https://user-images.githubusercontent.com/75053256/138406377-6f6c9840-3ecf-4ccf-bc71-ec5345fbcc75.png)
+
+이를 콘솔에서 찍어볼 수도 있지만, 조건문을 통해 간단하게 확인할 수 있다.
+<pre>
+if(조건 : condition) {
+    //조건이 true 일 때
+}else{
+    //조건이 false 일 때
+}
+</pre>
+if(여기) 에 방금 설정한 조건을 넣어주면 조건문이 된다. isNaN은 true,false를 출력하기 때문이다.
+
+- AND 와 OR (교집합과 합집합)
+
+&& : AND 연산자는 양쪽 다 true여야 결과가 true가 된다. 앞에꺼가 false면 바로 그냥 false로 출력된다. 오른쪽을 보지도 않는다.
+
+|| : OR 연산자는 한쪽만 ture여도 결과가 true가 된다. 앞에꺼가 false면 오른쪽의 값에 따라 리턴값이 결정된다.
+<br><br>
+문자열이 있는 경우, 문자열은 기본적으로 빈 값이 아니라면 true로 리턴된다.
+
+&& : 문자열은 ture이므로 앞에 위치하던 뒤에 위치하던 왼쪽이 중요하다. 만약 양쪽 다 문자열이면 true && "문자열" 이므로 문자열이 리턴된다.
+
+|| : 문자열은 ture이며, 왼쪽에 위치하면 true로 리턴된다.(오른쪽을 보지 않음) 만약 뒤에 있다면(앞이 false라면) 문자열이 리턴된다. 양쪽에 있는 경우 왼쪽의 문자열이 출력된다.
+
+![image](https://user-images.githubusercontent.com/75053256/138412465-0fc5ef21-bc48-4e2d-a3cd-e755c1fd13f7.png)
+
+
+## Recap(요약)
+### 1. Basic Type : typeof 로 확인 가능한
+
+- number : 숫자가 아니면 NaN
+- string
+- boolean
+- undefined : 선언 후 값 부여x
+- null : 선언 후 '없음' 값을 부여o
+- symbol : Es6) 변경 불가한 유일값을 생성할 때 사용. 값 자체의 확인이 불가하며 외부로 노출되지 않는다.
+  
+  *** 형변환 시 parseInt / parseString
+
+### 2. Reference Type
+- 객체 
+- 배열 : []
+- 함수 : ()
+- 정규 표현식
+
+   *** 배열, 함수, 정규표현식도 모두 객체다.
+
+### 3. 변수는 이 모든 것을 하나에 담는다.
+- const : 상수
+- let : 변수
+
+### 4. 사용자 지정 변수로 property 설정
+<pre>
+const player = {
+    name : "nico",
+    point : 1212,
+    age : 26
+}
+console.log(player.age) //26
+console.log(player["age"]) //26
+</pre>
+
+xx.xx로 꺼내 쓸 수도 있고, xx['xx']로도 꺼내쓸 수 있다.
+
+### 5. 함수
+반복사용할 수 있는 코드 조각. 소괄호로 실행 가능.
+<pre>
+fuction 함수명 (인자값들){
+    함수가 시행할 것;
+}
+
+함수명(여러값들); //인자값으로 순서대로 들어감.
+</pre>
+위의 사용자 지정 변수에서 property로도 사용 가능.
+
+### return
+return 명령문은 그 지점에서 함수 실행을 종료하고, 주어진 값을 함수 호출 지점으로 반환한다.
+
+### 조건문
+- AND 와 OR (교집합과 합집합) : && 과 ||
+
+
+
+
+
 
 <!-- 2021.10.19 -->
 

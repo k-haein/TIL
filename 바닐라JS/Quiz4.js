@@ -16,4 +16,4 @@ function handleResize() {
   }else if(wframe>600 &&wframe <=800){
 }
 
-window.addEventListener("resize", handleResize)
+window.addEventListener("resize", handleResize);

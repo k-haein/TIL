@@ -31,6 +31,7 @@ git pull origin
 ## - etc.
 
 * [Git contribution 그래프 채우기](./Git_contribution.md)
+* [개발자 로드맵](./RoadMap.md)
 * 맥북 개발자도구(F12) : [option + command + i]
 
 
@@ -144,3 +145,8 @@ git pull origin
 ## 바닐라JS
 + [1. Intro](./바닐라JS/intro.md)
 + [2. 다양한 Type들](./바닐라JS/Types.md)
++ [3. 브라우저와 자바스크립트](./바닐라JS/browser.md)
+
+
+## 크롬 공룡게임 만들기
++ [1. Intro](./크롬공룡게임/info.md)

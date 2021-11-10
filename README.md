@@ -30,9 +30,11 @@ git pull origin
 
 ## - etc.
 
-* [Git contribution 그래프 채우기](./Git_contribution.md)
-* [개발자 로드맵](./RoadMap.md)
+* [Git contribution 그래프 채우기](./기타/Git_contribution.md)
+* [개발자 로드맵](./기타/RoadMap.md)
+* [자주 쓰는 ES6 문법들](./기타/ES6문법.md)
 * 맥북 개발자도구(F12) : [option + command + i]
+* [타입 스크립트 관련](https://typescript-kr.github.io/)
 
 
 
@@ -77,49 +79,49 @@ git pull origin
 
 ## - React 무비리스트 만들기
 
-* [공부계획](./React_MovieList/계획.md)
-* [0-1. 기초셋팅](./React_MovieList/셋팅.md)
-* [0-2. 기본지식](./React_MovieList/기본지식.md)
+* [공부계획](./React_MovieList만들기/계획.md)
+* [0-1. 기초셋팅](./React_MovieList만들기/셋팅.md)
+* [0-2. 기본지식](./React_MovieList만들기/기본지식.md)
 
 
 <details markdown="1">
 
 <summary>1. create react app</summary>
 
-+ [1. react 실행](./React_MovieList/react_실행.md)
-+ [2. github 연동](./React_MovieList/github_연동.md)
-+ [3. 실행해보기](./React_MovieList/실행해보기.md)
-+ [4. SPA](./React_MovieList/SPA.md)
++ [1. react 실행](./React_MovieList만들기/react_실행.md)
++ [2. github 연동](./React_MovieList만들기/github_연동.md)
++ [3. 실행해보기](./React_MovieList만들기/실행해보기.md)
++ [4. SPA](./React_MovieList만들기/SPA.md)
 
 </details>
 <details markdown="1">
 
 <summary>2. jsx(component) / map / props, prop-types</summary>
 
- + [1. react_component](./React_MovieList/react_component.md)
- + [2. Dynamic_Component](./React_MovieList/Dynamic_Component.md)
- + [3. map_recap](./React_MovieList/map_recap.md)
- + [4. prop-types](./React_MovieList/prop-types.md)
- + [etc. FoodList 예제.js](./React_MovieList/FoodList_App.js)
+ + [1. react_component](./React_MovieList만들기/react_component.md)
+ + [2. Dynamic_Component](./React_MovieList만들기/Dynamic_Component.md)
+ + [3. map_recap](./React_MovieList만들기/map_recap.md)
+ + [4. prop-types](./React_MovieList만들기/prop-types.md)
+ + [etc. FoodList 예제.js](./React_MovieList만들기/FoodList_App.js)
 </details>
 <details markdown="1">
 
 <summary>3. State</summary>
 
-+ [1. Class Components](./React_MovieList/Class_Components.md)
-+ [2. setState](./React_MovieList/setState.md)
-+ [3. life cycle method](./React_MovieList/life_cycle_method.md)
++ [1. Class Components](./React_MovieList만들기/Class_Components.md)
++ [2. setState](./React_MovieList만들기/setState.md)
++ [3. life cycle method](./React_MovieList만들기/life_cycle_method.md)
     
 </details>
 <details markdown="1">
 
 <summary>4. 무비앱 만들기</summary>
 
-+ [1. fetch](./React_MovieList/fetch.md)
-+ [2. github.io 연결](./React_MovieList/github_io.md)
-+ [etc. MovieList_App.js](./React_MovieList/MovieList_App.js)
-+ [etc. MovieList_Movie.js](./React_MovieList/MovieList_Movie.js)
-+ [plus.추가강의](./React_MovieList/PlusLecture.md)
++ [1. fetch](./React_MovieList만들기/fetch.md)
++ [2. github.io 연결](./React_MovieList만들기/github_io.md)
++ [etc. MovieList_App.js](./React_MovieList만들기/MovieList_App.js)
++ [etc. MovieList_Movie.js](./React_MovieList만들기/MovieList_Movie.js)
++ [plus.추가강의](./React_MovieList만들기/PlusLecture.md)
   
 </details><br>
 

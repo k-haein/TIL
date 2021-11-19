@@ -5,36 +5,16 @@
 <br>
 
 
-<!-- 개괄은 이렇게 사용하기로 합니다. -->
-<!-- 
-폴더 이름엔 스페이스 공백이 있으면 링크 인식이 안됩니다.
-## 대주제
-* 폴더 이름
-    + 소주제
-        - [제목](./폴더이름/경로.md)
-        - 쭉쭉 쓰기 
--->
-
-<!-- Git push 메시지 -->
-<!--
-git add .
-git commit -m "커밋메시지"
-git push origin
- -->
- 
-<!-- Git 내용 업데이트 -->
-<!--
-git pull origin
-아무것도 없는 상태에서 연결하는건 git clone이다.
- -->
 
 ## - etc.
 
+* [마크다운](./기타/Markdown.md)
 * [Git contribution 그래프 채우기](./기타/Git_contribution.md)
 * [개발자 로드맵](./기타/RoadMap.md)
 * [자주 쓰는 ES6 문법들](./기타/ES6문법.md)
+* [직접 짜본 코드 메모](./기타/Memo.md)
 * 맥북 개발자도구(F12) : [option + command + i]
-* [타입 스크립트 관련](https://typescript-kr.github.io/)
+* [타입 스크립트 관련 링크](https://typescript-kr.github.io/)
 
 
 
@@ -141,8 +121,6 @@ git pull origin
 + [행렬의 덧셈](./프로그래머스/JS_Level1/행렬의덧셈.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12950))
 
 + [핸드폰 번호 가리기](./프로그래머스/JS_Level1/핸드폰번호.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12948))
-
-+ [](./프로그래머스/JS_Level1/핸드폰번호.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/43105))
 
 
 <!-- </details> -->

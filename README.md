@@ -9,6 +9,7 @@
 ## - etc.
 
 * [마크다운](./기타/Markdown.md)
+* [설계자 입장에서 본 시스템 설계 기본](./기타/basic_info.md)
 * [Git contribution 그래프 채우기](./기타/Git_contribution.md)
 * [개발자 로드맵](./기타/RoadMap.md)
 * [자주 쓰는 ES6 문법들](./기타/ES6문법.md)

@@ -7,10 +7,11 @@
     <title>Momentum App</title>
 </head>
 <body>
-    <div id="login-form">
-    <input type='text' placeholder="what is your name?"/>
+    <form id="login-form">
+<!-- input 태그의 유효성 검사를 하고싶다면, div 태그가 아닌 form 태그를 써야한다. -->
+    <input type='text' required maxlength="15" placeholder="what is your name?"/>
     <button>Log In</button>
     <script src="app.js"></script>
-    </div>
+    </form>
 </body>
 </html>

@@ -37,12 +37,12 @@
 
 package.json으로 가면 사용할 수 있는 정보들이 나온다. 여기서 우리는 script에 있는 start와 build가 제일 중요하다.
 
-<code>
- "scripts": {<br>
-    "start": "react-scripts start",<br>
-    "build": "react-scripts build",<br>
+```
+ "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
 ...
-</code>
+```
 
 yarn은 npm이랑 동일한 역할을 하는데 우리한테는 설치되어있지 않을꺼다.
 

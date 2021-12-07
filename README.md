@@ -9,13 +9,13 @@
 
 ## - etc.
 
+* 맥북 개발자도구(F12) : [option + command + i]
 * [마크다운](./기타/Markdown.md)
 * [설계자 입장에서 본 시스템 설계 기본](./기타/basic_info.md)
 * [Git contribution 그래프 채우기](./기타/Git_contribution.md)
 * [개발자 로드맵](./기타/RoadMap.md)
-* [자주 쓰는 ES6 문법들](./기타/ES6문법.md)
-* [직접 짜본 코드 메모](./기타/Memo.md)
-* 맥북 개발자도구(F12) : [option + command + i]
+* [🛠 자주 쓰는 ES6 문법들 🛠](./기타/ES6문법.md)
+* [🛠 직접 짜본 코드 메모 🛠](./기타/Memo.md)
 * [타입 스크립트 관련 링크](https://typescript-kr.github.io/)
 
 
@@ -27,8 +27,6 @@
 
 * [화면 덤프 추출 방법](./업무지식/덤프.md)
 * [DRM이란](./업무지식/DRM.md)
-* [poi이란](./업무지식/poi.md)
-* [MultiPartRequest](./업무지식/MultiPartRequest.md)
 * [MaxPostSize/MaxParameterCount](./업무지식/MaxPostSize.md)
 * [MIME타입](./업무지식/MimeType.md)
 * [공수산정](./업무지식/공수산정.md)
@@ -49,8 +47,9 @@
 
 <summary>예정</summary>
 
+* [poi이란](./업무지식/poi.md)
+* [MultiPartRequest](./업무지식/MultiPartRequest.md)
 * [컴퓨터 구조](./업무지식/컴퓨터구조.md)
-* [SSL](./업무지식/SSL.md)
 * [DNS](./업무지식/DNS.md)
 * [JSON HAL](./업무지식/JSON_HAL.md)
 * [spring-boot](./업무지식/spring-boot.md)

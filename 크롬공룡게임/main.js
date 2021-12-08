@@ -36,23 +36,39 @@ class Cactus {
         ctx.fillRect(this.x,this.y,this.width,this.height);
     }   
 }
-const cactus = new Cactus(); //new 연산자로 객체 생성
+//const cactus = new Cactus(); //new 연산자로 객체 생성
 
 
-cactus.draw(); //빨간 네모를 그리자
+//cactus.draw(); //빨간 네모를 그리자
 
 
 //-----------------------
 // 애니메이션을 주는 함수
 //-----------------------
 
+let timer = 0; // 타이머 생성
+let cactusArray = []; //장애물들을 담는 배열
+
 function eachFrameStart(){ //프레임마다 실행할 것
     requestAnimationFrame(eachFrameStart);
 
-    dino.x++;
-    dino.draw();
+    timer++;
 
+    ctx.clearRect(0,0,canvas.width,canvas.height);
 
+   if(timer % 120 === 0){ //만약 프레임이 120이면,(=2초면)
+        const cactus = new Cactus();
+        cactusArray.push(cactus); 
+        
+   }
+   cactusArray.forEach((a) => { //한번에 장애물 생성
+    a.x--;
+    a.draw(); 
+   });
+
+   dino.draw();
 }
 
 eachFrameStart();
+
+

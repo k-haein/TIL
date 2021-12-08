@@ -129,3 +129,80 @@ function eachFrameStart(){ //프레임마다 실행할 것들을 담아놓은 �
 eachFrameStart();
 ```
 
+<img width="641" alt="스크린샷 2021-12-08 오후 8 47 11" src="https://user-images.githubusercontent.com/75053256/145203372-c0e17cbd-94cc-41f3-a5d0-cef883a48ad9.png">
+
+그럼 이렇게 길게 그려지는데 계속해서 연속해서 그려진다. 왜냐면 전에 진행한 코드를 삭제하는 로직이 없기 때문.
+
+따라서 이 경우엔 "기존 위치를 지우고", 그다음에 "그리고" 이 로직을 1초에 60번씩 반복해주기로 하자.
+```javascript
+function eachFrameStart(){
+    requestAnimationFrame(eachFrameStart);
+    ctx.clearRect(0,0,canvas.width,canvas.height); //기존꺼 지우고
+    dino.x++; //그린다.
+    dino.draw();
+}
+eachFrameStart();
+```
+
+anvas.getContext('2d')에 있는 clearRect 메소드를 사용하면 기존의 것을 삭제할 수 있다.
+
+#### 4. 장애물 동적으로 생성하기
+
+여기까지는 크롬 공룡 게임 기준으로 캐릭터가 움직이는 것을 구현했다.
+
+하지만 크롬 공룡게임을 생각해보자. 캐릭터는 가만히 있고 장애물이 다가온다.
+
+우리는 이제 위에서 설정한 requestAnimationFrame 를 이용해서 프레임마다 장애물이 캐릭터에게 다가올 수 있도록 함수를 짜볼 것이다.
+
+그리고 이건 배경도 마찬가지다. 굳이 캐릭터를 움직일 필요 없이 배경이 다가오면 걸어가는 것처럼 느껴진다!!(두둥탁) 이런 꿀 정보를 얻었으니 얼른 만들어보자.
+
+```javascript
+const timer = 0; // 타이머 생성
+```
+
+게임 세상은 초로 움직이지 않고 항상 프레임으로 움직인다.
+
+따라서 우리는 timer를 만들고, 프레임이 진행될때마다 +가 되게 한다.
+
+그리고 그 해당 프레임이 되었을 떄 0으로 떨어지면 그게 바로 초라고 생각해야 한다.
+
+즉, 60 프레임마다 장애물이 하나 나온다!! 라고 짜면 그게 1초마다 1개씩 나오는거다.
+
+자, 이제 장애물이 1초마다 1개씩 나오게 하는데, 이걸 또 여러개가 있어야 하잖아?
+
+이걸 배열에 담아서 한번에 그려줘보자.
+
+됐고, 코드를 보면
+
+```javascript
+let timer = 0; // 타이머 생성
+let cactusArray = []; //장애물들을 담는 배열
+
+function eachFrameStart(){ //프레임마다 실행할 것
+    requestAnimationFrame(eachFrameStart); //나 기본 프레임 속도로 애니메이션 그릴꺼야.
+
+    timer++; //1프레임이 진행될때마다 timer 하나씩 추가해
+
+    ctx.clearRect(0,0,canvas.width,canvas.height); //기존꺼 지우고
+
+   if(timer % 120 === 0){ //만약 프레임이 120이면,(=2초면)
+        const cactus = new Cactus(); //new 연산자로 장애물 객체 생성
+        cactusArray.push(cactus); //생긴 장애물을 배열에 넣기
+   }
+   cactusArray.forEach((a) => { //120프레임마다 생성한 장애물을 배열에 담고 한번에 그리자.
+    a.x--;  //그리면서 x좌표 하나씩 줄여.
+    a.draw(); //그리고 장애물 한번에 그려봐.
+   });
+   dino.draw(); //캐릭터 그리기
+}
+
+eachFrameStart(); //실행
+```
+
+![ezgif-4-03b6f4bf9c9f](https://user-images.githubusercontent.com/75053256/145207677-c9080021-2884-483b-9465-aa3856a5bb5c.gif)
+
+참 쉽죠?
+
+뭔가 오류가 났었는데, 전역변수로 timer와 cactusArray 설정을 const로 했다가 오류났다.
+
+#### 5. 

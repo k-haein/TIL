@@ -5,7 +5,9 @@ const ctx = canvas.getContext('2d'); //해당 canvas는 2d 그래픽 랜더링 �
 canvas.width = window.innerWidth -100;
 canvas.height = window.innerHeight -100;
 
+//-----------
 //공룡의 정보
+//-----------
 var dino = {
     x : 10,
     y : 200,
@@ -19,7 +21,9 @@ var dino = {
 
 dino.draw(); //네모 꺼내서 그리기
 
-//장애물의 정보 -> 각각의 width,height등의 정보가 각각 다르므로 비슷한 obj가 많이 필요할 것. 그래서 보통 class를 쓴다.
+//-------------
+//장애물의 정보
+//-------------
 class Cactus {
     constructor(){ //객체 인스턴스의 타입을 기술하는 함수.
         this.x = 500;
@@ -35,5 +39,20 @@ class Cactus {
 const cactus = new Cactus(); //new 연산자로 객체 생성
 
 
-cactus.draw();
+cactus.draw(); //빨간 네모를 그리자
 
+
+//-----------------------
+// 애니메이션을 주는 함수
+//-----------------------
+
+function eachFrameStart(){ //프레임마다 실행할 것
+    requestAnimationFrame(eachFrameStart);
+
+    dino.x++;
+    dino.draw();
+
+
+}
+
+eachFrameStart();

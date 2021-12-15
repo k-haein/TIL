@@ -5,8 +5,14 @@ const ctx = canvas.getContext('2d'); //해당 canvas는 2d 그래픽 랜더링 �
 canvas.width = window.innerWidth -100;
 canvas.height = window.innerHeight -100;
 
+
+
+
+//self======================
+//이미지를 gif처럼 만들기
+//self======================
 const img1 = new Image();
-img1.src = 'rollin.gif';
+//img1.src = 'rollin.gif';
 
 
 //-----------
@@ -20,8 +26,19 @@ var dino = {
     draw(){ //dino.draw()로 꺼내쓸 수 있다.
         //ctx.fillStyle = 'green';
         ctx.fillRect(this.x,this.y,this.width,this.height);
-        ctx.drawImage(img1,this.x,this.y,this.width,this.height);
-    
+       // ctx.drawImage(img1,this.x,this.y,this.width,this.height);
+        
+       setInterval(() =>
+           {for (i=1;i<4;i++){
+            img1.src = "bingeul_img/"+i+".gif"; 
+            ctx.drawImage(img1, this.x, this.y, this.width, this.height);
+        }}, 1000);
+
+
+
+
+
+
     }
 }
 

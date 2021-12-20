@@ -1,8 +1,6 @@
 # 크롬 공룡게임 만들기
 
-## 자바스크립트로 2d 게임 만들기
-
-### 무작정 따라하기
+## 자바스크립트로 2d 게임 만들기, 무작정 따라하기
 
 링크 : https://youtu.be/qkTtmgCjHhM
 
@@ -10,7 +8,7 @@
 HTML CSS JS만으로 만든 게임 중 유명한 것이 synergium과 candyBox 등이 있다.
 
 
-#### 게임의 원리와 구현 방법
+### 0. 게임의 원리와 구현 방법
 
 1. 내가 화면에 네모나 원을 그릴 수 있어야 한다.(CSS나 캔버스 태그를 사용해야한다.)
 2. 프레임마다 코드 실행을 할 수 있어야 한다.
@@ -18,7 +16,7 @@ HTML CSS JS만으로 만든 게임 중 유명한 것이 synergium과 candyBox �
 
 자 이제 네모부터 그려본다.
 
-#### 1. 네모 그리기
+### 1. 네모 그리기
 
 1) HTML 템플릿에서 body에 canvas 태그를 만든다. 원래 기본 사이즈는 300x150인데, 윈도우 크기만큼 조절을 해주자.
 
@@ -32,9 +30,9 @@ canvas는 처음에는 width와 height 두 속성만 있다.
 
 즉, 처음에는 비어있는데, 여기에 무언가를 표시하기 위해서 어떤 스크립트가 랜더링 컨텍스트에 접근해서 그리도록 할 필요가 있다.
 
-따라서 캔버스 위에 랜더링 될 수 있는 컨텍스트에 접근하기 위해 getContext() 메서드를 이용해서 그리기 함수들을 사용할 수 있다.
+따라서 캔버스 위에 랜더링 될 수 있는 컨텍스트에 접근하기 위해 <b>getContext()</b> 메서드를 이용해서 그리기 함수들을 사용할 수 있다.
 
-getContext() 메서드는 랜더링 컨텍스트 '타입'을 지정하는 하나의 파라미터값을 가진다. 여기서 우리는 2D 게임을 만드는 것이므로 '2d'로 설정해준다.
+<b>getContext()</b> 메서드는 랜더링 컨텍스트 '타입'을 지정하는 하나의 파라미터값을 가진다. 여기서 우리는 2D 게임을 만드는 것이므로 '2d'로 설정해준다.
 
 
 ```javascript
@@ -48,7 +46,7 @@ ctx.fillRect(10,10,100,100); //초록색 박스가 그려진다.
 
 우리는 게임을 만드는 것이기 때문에, 이러한 네모처럼 등장 캐릭터의 속성부터 등장하는 위치(좌표) 등을 object{}에 정보를 담아두면 편리하다.
 
-#### 2. 공룡과 장애물 그리기
+### 2. 공룡과 장애물 그리기
 
 공룡의 정보부터 저장해보자.
 
@@ -91,20 +89,22 @@ class Cactus {
 const cactus = new Cactus(); //new 연산자로 객체 생성
 ```
 
-#### 3. 애니메이션 만들기
+### 3. 애니메이션 만들기
 
-모든 게임은 애니메이션이 존재한다. x 좌표를 수정하면 좌표가 이동한다. 하지만 옮기면 옮겨지기는 하지만 이건 애니메이션은 아니다.
+모든 게임은 애니메이션이 존재한다. x 좌표를 수정하면 좌표가 이동한다. (깜박 하면서 이동)
 
 ```javascript
 dino.x = 100; //100px 만큼 이동한다.
 ```
 
+하지만 옮기면 옮겨지기는 하지만 이건 애니메이션은 아니다.
+
 따라서 옮기는거 말고 이동을 한다면, 그 경로가 보여지게 하는 것이 좋다.
 
-대충 1초에 60번씩 움직이게 해보면 어떨까?
+대충 1초에 60번씩 움직이게 해보면 어떨까? ( = 60프레임 이동)
 
 ```javascript
-dino.x += 1; //이런식으로 계속해서 추가해준다.
+dino.x += 1; //1초에 x 좌표를 60프레임만큼 추가한다.
 ```
 
 원래 이런 애니메이션 관련 자바스크립트 함수가 있다. 그 라이브러리를 사용하는 것이 좋다.
@@ -122,23 +122,26 @@ dino.x += 1; //이런식으로 계속해서 추가해준다.
 
 ```javascript
 function eachFrameStart(){ //프레임마다 실행할 것들을 담아놓은 함수
-    requestAnimationFrame(eachFrameStart); //
-    dino.x++;
-    dino.draw();
+    requestAnimationFrame(eachFrameStart); // 여기 담은거 프레임단위로 애니메이션처럼 움직일게!
+    dino.x++; //dino의 x좌표를 계속해서 늘린다.(1초에 60프레임)
+    dino.draw(); //그려봐
 }
 eachFrameStart();
 ```
 
 <img width="641" alt="스크린샷 2021-12-08 오후 8 47 11" src="https://user-images.githubusercontent.com/75053256/145203372-c0e17cbd-94cc-41f3-a5d0-cef883a48ad9.png">
 
-그럼 이렇게 길게 그려지는데 계속해서 연속해서 그려진다. 왜냐면 전에 진행한 코드를 삭제하는 로직이 없기 때문.
+그럼 이렇게 길게 동적으로 그려지는데 계속해서 연속해서 그려진다.
 
-따라서 이 경우엔 "기존 위치를 지우고", 그다음에 "그리고" 이 로직을 1초에 60번씩 반복해주기로 하자.
+왜냐면 전에 진행한 코드를 삭제하는 로직이 없기 때문.
+
+따라서 이 경우엔 "기존 위치를 지우고", 그다음에 "그리는" 이 로직을 1초에 60번씩 반복해주기로 하자.
+
 ```javascript
 function eachFrameStart(){
     requestAnimationFrame(eachFrameStart);
     ctx.clearRect(0,0,canvas.width,canvas.height); //기존꺼 지우고
-    dino.x++; //그린다.
+    dino.x++; //1초에 60프레임씩 그린다.
     dino.draw();
 }
 eachFrameStart();
@@ -146,7 +149,7 @@ eachFrameStart();
 
 anvas.getContext('2d')에 있는 clearRect 메소드를 사용하면 기존의 것을 삭제할 수 있다.
 
-#### 4. 장애물 동적으로 생성하기
+### 4. 장애물 동적으로 생성하기
 
 여기까지는 크롬 공룡 게임 기준으로 캐릭터가 움직이는 것을 구현했다.
 
@@ -154,7 +157,9 @@ anvas.getContext('2d')에 있는 clearRect 메소드를 사용하면 기존의 �
 
 우리는 이제 위에서 설정한 requestAnimationFrame 를 이용해서 프레임마다 장애물이 캐릭터에게 다가올 수 있도록 함수를 짜볼 것이다.
 
-그리고 이건 배경도 마찬가지다. 굳이 캐릭터를 움직일 필요 없이 배경이 다가오면 걸어가는 것처럼 느껴진다!!(두둥탁) 이런 꿀 정보를 얻었으니 얼른 만들어보자.
+그리고 이건 배경도 마찬가지다. <u>굳이 캐릭터를 움직일 필요 없이 배경이 다가오면 걸어가는 것처럼 느껴진다!!(두둥탁)</u> 
+
+이런 꿀 정보를 얻었으니 얼른 만들어보자.
 
 ```javascript
 const timer = 0; // 타이머 생성
@@ -178,22 +183,22 @@ const timer = 0; // 타이머 생성
 let timer = 0; // 타이머 생성
 let cactusArray = []; //장애물들을 담는 배열
 
-function eachFrameStart(){ //프레임마다 실행할 것
+function eachFrameStart() { //프레임마다 실행할 것
     requestAnimationFrame(eachFrameStart); //나 기본 프레임 속도로 애니메이션 그릴꺼야.
 
     timer++; //1프레임이 진행될때마다 timer 하나씩 추가해
 
-    ctx.clearRect(0,0,canvas.width,canvas.height); //기존꺼 지우고
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //기존꺼 지우고
 
-   if(timer % 120 === 0){ //만약 프레임이 120이면,(=2초면)
+    if (timer % 120 === 0) { //만약 프레임이 120이면,(=2초면)
         const cactus = new Cactus(); //new 연산자로 장애물 객체 생성
         cactusArray.push(cactus); //생긴 장애물을 배열에 넣기
-   }
-   cactusArray.forEach((a) => { //120프레임마다 생성한 장애물을 배열에 담고 한번에 그리자.
-    a.x--;  //그리면서 x좌표 하나씩 줄여.
-    a.draw(); //그리고 장애물 한번에 그려봐.
-   });
-   dino.draw(); //캐릭터 그리기
+    }
+    cactusArray.forEach((a) => { //120프레임마다 생성한 장애물을 배열에 담고 한번에 그리자.
+        a.x--; //그리면서 x좌표 하나씩 줄여.
+        a.draw(); //그리고 장애물 한번에 그려봐.
+    });
+    dino.draw(); //캐릭터 그리기
 }
 
 eachFrameStart(); //실행
@@ -205,7 +210,7 @@ eachFrameStart(); //실행
 
 뭔가 오류가 났었는데, 전역변수로 timer와 cactusArray 설정을 const로 했다가 오류났다.
 
-#### 5. 필요없어진 장애물 제거
+### 5. 필요없어진 장애물 제거
 
 자, 우리는 배열에 각각 장애물을 생성해서 담았고, 그걸 한번에 그려주는 반복문을 사용했다.(forEach)
 
@@ -213,7 +218,51 @@ eachFrameStart(); //실행
 
 따라서 왼쪽 끝까지 간 장애물은 배열에서도 제거해주도록 하자.
 
-#### 충돌 체크하기
+```javascript
+function eachFrameStart() { //프레임마다 실행할 것
+    requestAnimationFrame(eachFrameStart);
+    timer++;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (timer % 120 === 0) { //만약 프레임이 120이면,(=2초면)
+        const cactus = new Cactus();
+        cactusArray.push(cactus); //장애물 생성해서 배열에 넣기
+    }
+    cactusArray.forEach((a, i, o) => { //배열 꺼내서 반복문
+        //x좌표가 0 미만이면 제거해라.
+        if (a.x < 0) {
+            o.splice(i, 1);
+        }
+        a.x--;
+        a.draw();
+    });
+    dino.draw();
+}
+
+eachFrameStart(); //실행
+```
+forEach는 3가지 매개변수를 받는다.
+
+1. currentValue : 처리할 현재 요소
+2. index : 그 index 값
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 충돌 체크하기
 
 <img width="322" alt="스크린샷 2021-12-08 오후 9 51 31" src="https://user-images.githubusercontent.com/75053256/145211347-17f4538b-65f3-4514-97a8-70d1912377b0.png">
 

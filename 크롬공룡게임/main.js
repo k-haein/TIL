@@ -12,7 +12,7 @@ canvas.height = window.innerHeight -100;
 //이미지를 gif처럼 만들기
 //self======================
 const img1 = new Image();
-//img1.src = 'rollin.gif';
+img1.src = 'bingeul_img/1.gif';
 
 
 //-----------
@@ -21,19 +21,21 @@ const img1 = new Image();
 var dino = {
     x : 10,
     y : 200,
-    width : 200,
-    height : 200,
+    width : 50,
+    height : 50,
     draw(){ //dino.draw()로 꺼내쓸 수 있다.
         //ctx.fillStyle = 'green';
         ctx.fillRect(this.x,this.y,this.width,this.height);
-       // ctx.drawImage(img1,this.x,this.y,this.width,this.height);
-        
-       setInterval(() =>
-           {for (i=1;i<4;i++){
-            img1.src = "bingeul_img/"+i+".gif"; 
-            ctx.drawImage(img1, this.x, this.y, this.width, this.height);
-        }}, 1000);
-
+       ctx.drawImage(img1,this.x,this.y,this.width,this.height);
+     
+       
+    //이걸로는 gif처럼 안됨. 먼저 gif 처럼 만드는 것을 연습후에 넣자.-----------------
+    //    setInterval(() =>
+    //        {for (i=1;i<4;i++){
+    //         img1.src = "bingeul_img/"+i+".gif"; 
+    //         ctx.drawImage(img1, this.x, this.y, this.width, this.height);
+    //     }}, 1000);
+    //--------------------------------------------------------------------------------
 
 
 
@@ -44,7 +46,7 @@ var dino = {
 
 
 
-//dino.draw(); //네모 꺼내서 그리기
+// dino.draw(); //네모 꺼내서 그리기
 
 //-------------
 //장애물의 정보

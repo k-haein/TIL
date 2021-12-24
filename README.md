@@ -41,6 +41,7 @@
 
 * [크로미움 기반](./업무지식/크로미움.md)
 
+* [한글 입력 시 buffer 문제](./업무지식/input_buffer.md)
 </details>
 
 <details markdown="1">

@@ -20,9 +20,9 @@ img1.src = 'bingeul_img/1.gif';
 //-----------
 var dino = {
     x : 10,
-    y : 200,
-    width : 50,
-    height : 50,
+    y : 100,
+    width : 100,
+    height : 100,
     draw(){ //dino.draw()로 꺼내쓸 수 있다.
         //ctx.fillStyle = 'green';
         ctx.fillRect(this.x,this.y,this.width,this.height);

@@ -57,6 +57,7 @@
 * [spring-boot](./업무지식/spring-boot.md)
 * [DOCTYPE](./업무지식/DOCTYPE.md)
 * [IO](./업무지식/IO.md)
+* [XMLHttpRequest](./업무지식/XMLHttpRequest.md)
 
 </details>
 

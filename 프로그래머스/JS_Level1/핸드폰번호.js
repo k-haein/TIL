@@ -38,6 +38,7 @@ function hide_numbers(s) {
 문제풀이
 정규식...왜...생각을 못했을까...
 substr은 옛날 함수라 쓰지 말라고 하고, subString하고 slice가 남아있는데 slice가 음수를 지원하므로 slice를 추천함.
+즉, slice로 처음 생각했던 뒤에서 추출이 되었던것.
 
 slice를 쓰는 방법은
 

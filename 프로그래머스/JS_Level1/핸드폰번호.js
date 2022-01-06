@@ -14,13 +14,39 @@ phone_number	   return
 
 //내 답변
 function solution(phone_number) {
-    var answer = phone_number.replace(/\d(?=\d{4})/g,"*");
+    let answer = '';
+
+    let frontLength = phone_number.length - 4;
+
+   let lastWord = phone_number.substr(frontLength);
+
+
+   answer = "*".repeat(frontLength) + lastWord;
+
     return answer;
 }
 
+/*
+베스트 풀이
+
+function hide_numbers(s) {
+  return s.replace(/\d(?=\d{4})/g, "*");
+}
+*/
 
 /*
 문제풀이
+정규식...왜...생각을 못했을까...
+substr은 옛날 함수라 쓰지 말라고 하고, subString하고 slice가 남아있는데 slice가 음수를 지원하므로 slice를 추천함.
+
+slice를 쓰는 방법은
+
+
+function hide_numbers(s){
+  var result = "*".repeat(s.length - 4) + s.slice(-4);
+
+  return result;
+}
 
 
 */

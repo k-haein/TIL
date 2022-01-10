@@ -15,7 +15,7 @@ img2.src = 'bingeul_img/cactus.png'; //장애물 이미지
 //-----------
 var dino = { //object에 넣어놓자.
     x : 10,
-    y : 100,
+    y : 200,
     width : 50,
     height : 50,
     draw(){ //dino.draw()로 꺼내쓸 수 있다.
@@ -42,7 +42,7 @@ class Cactus {
         //ctx.drawImage(img2,this.x,this.y,this.width,this.height); //장애물 이미지 삽입하기
     }   
 }
-const cactus = new Cactus(); //new 연산자로 객체 생성
+//const cactus = new Cactus(); //new 연산자로 객체 생성
 
 
 //-----------------------------------------------------------
@@ -52,6 +52,7 @@ let timer = 0;
 let cactusArray = [];
 let jumpTimer = 0;
 let animation;
+let jumpingSwitch = false;
 
 //----------------
 //프레임마다 실행할 것
@@ -63,7 +64,7 @@ function eachFrameStart(){
 
     ctx.clearRect(0, 0, canvas.width, canvas.height); //기존거 삭제
 
-    if (timer % 120 === 0) { //2초마다 장애물 생성
+    if (timer % 240 === 0) { //2초마다 장애물 생성
         const cactus = new Cactus();
         cactusArray.push(cactus);
     }
@@ -105,19 +106,7 @@ function eachFrameStart(){
 }
 
 
-//--------------------------------
-//이벤트 리스너 사용 : 스페이스 누르면 점프
-//--------------------------------
-let jumpingSwitch = false;
-
-document.addEventListener('keydown', function(pushkey){
-    if (pushkey.code === 'Space'){ 
-        jumpingSwitch = true;
-    }
-});
-
 eachFrameStart();
-
 
 //--------------------------
 //충돌 하는지 안하는지 판단하는 함수
@@ -130,12 +119,26 @@ function isCollision(dino, cactus){
     let minusY =  cactus.y - (dino.y + dino.heignt); //높이만큼 더해줘야함.
 
     //각각의 차이가 0보다 작으면 부딪힌거다.(and임)
-    if(minusX < 0 && minusY < 0){
+    if(minusX < 0 || minusY < 0){
+        
         //게임을 정지하자.
         //캔버스를 클리어해볼까?
-        //ctx.clearRect(0, 0, canvas.width, canvas.height); //기존거 삭제
+        ctx.clearRect(0, 0, canvas.width, canvas.height); //기존거 삭제
 
         //또는 모든 애니메이션을 멈춘다.
         cancelAnimationFrame(animation);
     }
-}
+};
+
+
+//--------------------------------
+//이벤트 리스너 사용 : 스페이스 누르면 점프
+//--------------------------------
+
+document.addEventListener('keydown', function(pushkey){
+    if (pushkey.code === 'Space'){ 
+        jumpingSwitch = true;
+    }
+});
+
+

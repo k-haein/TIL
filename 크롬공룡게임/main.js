@@ -1,158 +1,141 @@
 const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d'); //해당 canvas는 2d 그래픽 랜더링 컨텍스트가 접근 가능함.
-
+const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth -100;
 canvas.height = window.innerHeight -100;
 
-
-
-
-//self======================
-//이미지를 gif처럼 만들기
-//self======================
+//이미지 불러오기
 const img1 = new Image();
-img1.src = 'bingeul_img/1.gif';
-
+img1.src = 'bingeul_img/dino.png'; //공룡이미지
+const img2 = new Image();
+img2.src = 'bingeul_img/cactus.png'; //장애물 이미지
 
 //-----------
 //공룡의 정보
 //-----------
-var dino = {
+var dino = { //object에 넣어놓자.
     x : 10,
     y : 100,
-    width : 100,
-    height : 100,
+    width : 50,
+    height : 50,
     draw(){ //dino.draw()로 꺼내쓸 수 있다.
-        //ctx.fillStyle = 'green';
+        ctx.fillStyle = 'green';
         ctx.fillRect(this.x,this.y,this.width,this.height);
-       ctx.drawImage(img1,this.x,this.y,this.width,this.height);
-     
-       
-    //이걸로는 gif처럼 안됨. 먼저 gif 처럼 만드는 것을 연습후에 넣자.-----------------
-    //    setInterval(() =>
-    //        {for (i=1;i<4;i++){
-    //         img1.src = "bingeul_img/"+i+".gif"; 
-    //         ctx.drawImage(img1, this.x, this.y, this.width, this.height);
-    //     }}, 1000);
-    //--------------------------------------------------------------------------------
-
-
-
-
-
+        //ctx.drawImage(img1,this.x,this.y),this.width,this.height; //공룡 이미지 삽입하기
     }
 }
+//dino.draw(); //네모 꺼내서 그리기
 
-
-
-// dino.draw(); //네모 꺼내서 그리기
-
-//-------------
+//-----------
 //장애물의 정보
-//-------------
+//-----------
 class Cactus {
-    constructor(){ //객체 인스턴스의 타입을 기술하는 함수.
+    constructor(){
         this.x = 500;
-        this.y = 300;
-        this.width = 100;
-        this.height = 100;
+        this.y = 200;
+        this.width = 50;
+        this.height = 50;
     };
     draw(){
         ctx.fillStyle = 'red';
         ctx.fillRect(this.x,this.y,this.width,this.height);
+        //ctx.drawImage(img2,this.x,this.y,this.width,this.height); //장애물 이미지 삽입하기
     }   
 }
-//const cactus = new Cactus(); //new 연산자로 객체 생성
+const cactus = new Cactus(); //new 연산자로 객체 생성
 
 
-//cactus.draw(); //빨간 네모를 그리자
+//-----------------------------------------------------------
 
 
-//-----------------------
-// 애니메이션을 주는 함수
-//-----------------------
-
-let timer = 0; // 타이머 생성
-let cactusArray = []; //장애물들을 담는 배열
-let 점프timer = 0;
+let timer = 0;
+let cactusArray = [];
+let jumpTimer = 0;
 let animation;
 
-function eachFrameStart(){ //프레임마다 실행할 것
-    animation = requestAnimationFrame(eachFrameStart);
+//----------------
+//프레임마다 실행할 것
+//----------------
+function eachFrameStart(){ 
+    animation = requestAnimationFrame(eachFrameStart);//기본프레임마다 실행
 
-    timer++;
+    timer++;//시간 카운트
 
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //기존거 삭제
 
-   if(timer % 250 === 0){ //만약 프레임이 120이면,(=2초면)
+    if (timer % 120 === 0) { //2초마다 장애물 생성
         const cactus = new Cactus();
-        cactusArray.push(cactus); 
-        
-   }
-   cactusArray.forEach((a,i,o) => { //한번에 장애물 생성
-    //x좌표가 0 미만이면 제거해라.
-    if(a.x < 0){
-        //제거해라~
-        o.splice(i,1); //forEach에 인자를 담아서 제거해준 것
+        cactusArray.push(cactus);
     }
-    a.x--;
-
-
-    collision(dino,a); //충돌 체크
-
-    a.draw(); 
-   });
-
-   //---------------------------
-   //스페이스바를 누르면 캐릭터는 점프해라
-   //--------------------------- 
-   if(점프중 == true){
-        dino.y -= 3; //y축으로 1초에 2프레임만큼 날아가도록 하자.(=속도)
-        //dino.y--; //근데 이러면 무한하니까, 100프레임 지나면 점프 그만하게 해주자.
-        점프timer++;
-   };
-
-    if(점프중 == false){
-        if(dino.y < 200){ //300이상으로 움직이지 않는다.
-
-        dino.y+= 3;
+    cactusArray.forEach((cactus_, i, cactusArray_) => { //장애물 사라짐
+        if (cactus_.x < 0) {
+            cactusArray_.splice(i, 1);
         }
+        cactus_.x--;
+
+        //dino가 생성되는 장애물과 충돌하는지 확인
+        isCollision(dino,cactus_);
+
+        cactus_.draw();
+    });
+
+    //---------
+    //공룡이 뛴다.
+    //---------
+    //점프 스위치 설정
+    if(jumpingSwitch == true){
+        dino.y --;
+        jumpTimer++; //점프시 점프 타이머 세기
+    }
+
+    // 점프타이머 설정
+    if(jumpTimer > 100){
+        jumpingSwitch = false; //타이머가 100보다 크면 점프를 멈춰줘
+    }
+
+    // 점프 되돌아오기
+    if(jumpingSwitch == false){
+        if(dino.y < 200){ //200px이 넘지 않게 해라(=초기 높이로 제한)
+            dino.y++;
+            jumpTimer = 0; //점프타이머 초기화
+        };
     };
 
-    if(점프timer > 50){
-        점프중 = false;
-        점프timer = 0; //멈추고 나면 다시 점프 timer를 멈춰준다.
-    };
-
-   
-   dino.draw();
+    dino.draw();
 }
 
 
-//-------------- 
-//충돌 확인 : 좌표 뺴기
-//--------------
+//--------------------------------
+//이벤트 리스너 사용 : 스페이스 누르면 점프
+//--------------------------------
+let jumpingSwitch = false;
 
-function collision(dino,cactus){
-    const x축차이 = cactus.x - (dino.x + dino.width);
-    const y축차이 = cactus.x - (dino.y + dino.height);
-    if(x축차이 < 0 && y축차이 < 0){
-        //부딪히면 게임 정리하자. 캔버스를 클리어하자. 그리고 애니메이션을 멈춰버리자.
-        cancelAnimationFrame(animation);
-
+document.addEventListener('keydown', function(pushkey){
+    if (pushkey.code === 'Space'){ 
+        jumpingSwitch = true;
     }
-
-}
-
-let 점프중 = false;
-
-//스페이스바를 누르는 것은 이벤트 리스너를 활용한다.
-document.addEventListener('keydown',function(e){
-    if (e.code === 'Space'){
-        점프중 = true;
-    }
-})
-
+});
 
 eachFrameStart();
+
+
+//--------------------------
+//충돌 하는지 안하는지 판단하는 함수
+//--------------------------
+//충돌하냐?
+function isCollision(dino, cactus){
+    console.log("sdf");
+    //x축,y축의 차이
+    let minusX =  cactus.x - (dino.x + dino.width); //너비만큼 더해줘야함.
+    let minusY =  cactus.y - (dino.y + dino.heignt); //높이만큼 더해줘야함.
+
+    //각각의 차이가 0보다 작으면 부딪힌거다.(and임)
+    if(minusX < 0 && minusY < 0){
+        //게임을 정지하자.
+        //캔버스를 클리어해볼까?
+        //ctx.clearRect(0, 0, canvas.width, canvas.height); //기존거 삭제
+
+        //또는 모든 애니메이션을 멈춘다.
+        cancelAnimationFrame(animation);
+    }
+}

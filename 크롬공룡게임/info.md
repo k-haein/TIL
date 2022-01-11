@@ -59,7 +59,7 @@ var dino = {
     height : 50,
     draw(){ //함수로 담아놓으면 dino.draw()로 꺼내쓸 수 있다.
         ctx.fillStyle = 'green';
-        ctx.fillRect(this.x,this.y,this,width,this.height);
+        ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 }
 
@@ -512,7 +512,7 @@ eachFrameStart();
 function isCollision(dino, cactus){
     //x축,y축의 차이
     let minusX =  cactus.x - (dino.x + dino.width); //너비만큼 더해줘야함.
-    let minusY =  cactus.y - (dino.y + dino.heignt); //높이만큼 더해줘야함.
+    let minusY =  cactus.y - (dino.y + dino.height); //높이만큼 더해줘야함.
 
     //각각의 차이가 0보다 작으면 부딪힌거다.(and임)
     if(minusX < 0 && minusY < 0){
@@ -620,7 +620,7 @@ eachFrameStart();
 function isCollision(dino, cactus){
     //x축,y축의 차이
     let minusX =  cactus.x - (dino.x + dino.width); //너비만큼 더해줘야함.
-    let minusY =  cactus.y - (dino.y + dino.heignt); //높이만큼 더해줘야함.
+    let minusY =  cactus.y - (dino.y + dino.height); //높이만큼 더해줘야함.
 
     //각각의 차이가 0보다 작으면 부딪힌거다.(and임)
     if(minusX < 0 && minusY < 0){
@@ -720,7 +720,7 @@ var dino = { //object에 넣어놓자.
     draw(){ //dino.draw()로 꺼내쓸 수 있다.
         ctx.fillStyle = 'green';
         //ctx.fillRect(this.x,this.y,this.width,this.height);
-        ctx.drawImage(img1,this.x,this.y); //공룡 이미지 삽입하기
+        ctx.drawImage(img1,this.x,this.y,this.width,this.height); //공룡 이미지 삽입하기
     }
 }
 dino.draw(); //네모 꺼내서 그리기
@@ -736,7 +736,7 @@ class Cactus {
     draw(){
         ctx.fillStyle = 'red';
         //ctx.fillRect(this.x,this.y,this.width,this.height);
-        ctx.drawImage(img2,this.x,this.y); //장애물 이미지 삽입하기
+        ctx.drawImage(img2,this.x,this.y,this.width,this.height); //장애물 이미지 삽입하기
     }   
 }
 const cactus = new Cactus(); //new 연산자로 객체 생성

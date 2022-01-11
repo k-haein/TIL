@@ -116,10 +116,10 @@ function isCollision(dino, cactus){
     console.log("sdf");
     //x축,y축의 차이
     let minusX =  cactus.x - (dino.x + dino.width); //너비만큼 더해줘야함.
-    let minusY =  cactus.y - (dino.y + dino.heignt); //높이만큼 더해줘야함.
+    let minusY =  cactus.y - (dino.y + dino.height); //높이만큼 더해줘야함.
 
     //각각의 차이가 0보다 작으면 부딪힌거다.(and임)
-    if(minusX < 0 || minusY < 0){
+    if(minusX < 0 && minusY < 0){
         
         //게임을 정지하자.
         //캔버스를 클리어해볼까?

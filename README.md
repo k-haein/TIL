@@ -16,6 +16,7 @@
 * [개발자 로드맵](./기타/RoadMap.md)
 * [🛠 자주 쓰는 ES6 문법들 🛠](./기타/ES6문법.md)
 * [🛠 직접 짜본 코드 메모 🛠](./기타/Memo.md)
+* [🛠 Git 공부 🛠](./기타/Git.md)
 * [타입 스크립트 관련 링크](https://typescript-kr.github.io/)
 
 

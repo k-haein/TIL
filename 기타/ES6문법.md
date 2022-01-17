@@ -107,4 +107,66 @@ sum(3, 4); //7
 
 화살표 함수는 항상 보는 함수라 익숙하기는 하지만 사용 방법은 제대로 익혀야 할 것 같다.
 
+
+### 5. 템플릿 문자열(Template Literals)
+
+문자열 연결 시 +를 안쓰고 `를 써서 문자열 내에서 변수를 사용할 수 이ㅆ다.
+
+이전 문법:
+
+```javascript
+// ES5
+function myFunc1() {
+	return '안녕' + name + '너의 나이는' + age + '살 이다!'; 
+}
+
+console.log(myFunc1('영희', 22));
+// 출력 => 안녕 영희 너의 나이는 22살 이다!
+```
+
+새로운 ES6 문법 사용:
+
+```javascript
+// ES6
+const myFunc = (name, age) => {
+	return `안녕 ${name}, 너의 나이는 ${age}살 이다!`; 
+};
+
+console.log(myFunc1('영희', 22));
+// 출력 => 안녕 영희, 너의 나이는 22살 이다!
+```
+
+### 6. 프로미스(Promises)
+비동기 코드를 쓰는 방법. 비동기를 순차적으로 실행할 수 있게 한다.
+
+```javascript
+const myPromise = () => {
+	return new Promise((resolve, reject) => {
+		resolve('안녕하세요 Promise가 성공적으로 실행했습니다');
+	});
+};
+
+cosole.log(myPromise());
+// Promise {<resolved>: "안녕하세요 Promise가 성공적으로 실행했습니다"}
+```
+
+콘솔 반환 뒤 promise가 실행된다. 따라서 데이터를 가져온 후 함수를 실행하려면 Promise를 사용합니다. 
+Promise는 두 개의 매개 변수를 사용하며 resolve및 reject 예상 오류를 처리 할 수 있다.
+
+참고 : fetch 함수는 Promise 자체를 반환합니다!
+
+```javascript
+const url = 'https://jsonplaceholder.typicode.com/posts';
+const getData = (url) => {
+	return fetch(url);
+};
+
+getData(url).then(data => data.json()).then(result => console.log(result));
+```
+
+이제 콘솔을 기록하면 데이터 배열이 반환된다.
+
+
+
+
 <!-- 2021.11.10~ -->

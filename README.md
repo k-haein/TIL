@@ -126,7 +126,7 @@
 + [행렬의 덧셈](./프로그래머스/JS_Level1/행렬의덧셈.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12950))
 
 + [핸드폰 번호 가리기](./프로그래머스/JS_Level1/핸드폰번호.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12948))
-+ [핸드폰 번호 가리기](./프로그래머스/JS_Level1/없는숫자더하기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/86051))
++ [없는 숫자 더하기](./프로그래머스/JS_Level1/없는숫자더하기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/86051))
 
 
 <!-- </details> -->
@@ -140,3 +140,5 @@
 
 ## 크롬 공룡게임 만들기
 + [1. Intro](./크롬공룡게임/info.md)
++ [2. main.js(강의)](./크롬공룡게임/main_Ver1.js)
++ [3. main.js(셀프)](./크롬공룡게임/main.js)

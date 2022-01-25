@@ -39,6 +39,7 @@
 * [반응형 웹](./업무지식/반응형웹.md)
 * [언더스코어](./업무지식/Underscore.md)
 * [LazyLoad](./업무지식/LazyLoad.md)
+* [DOCTYPE](./업무지식/doctype.md)
 
 * [크로미움 기반](./업무지식/크로미움.md)
 
@@ -56,7 +57,6 @@
 * [DNS](./업무지식/DNS.md)
 * [JSON HAL](./업무지식/JSON_HAL.md)
 * [spring-boot](./업무지식/spring-boot.md)
-* [DOCTYPE](./업무지식/DOCTYPE.md)
 * [IO](./업무지식/IO.md)
 * [XMLHttpRequest](./업무지식/XMLHttpRequest.md)
 

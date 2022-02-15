@@ -41,10 +41,9 @@ function solution(absolutes, signs) {
     return answer;
 }
 
-
-
 /*
 내풀이 : 음수면 마이너스 붙여서 reduce로 배열을 더한다.
+마이너스를 붙인다면  answer -= absolutes[i]; 로 하는게 훨씬 효율적이었을 것 같다.
 */
 
 function solution(absolutes, signs) {

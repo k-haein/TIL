@@ -130,7 +130,8 @@
 + [없는 숫자 더하기](./프로그래머스/JS_Level1/없는숫자더하기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/86051))
 + [음양 더하기](./프로그래머스/JS_Level1/음양더하기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/76501))
 
-+ [음양 더하기](./프로그래머스/JS_Level1/소수만들기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12977))
++ [소수만들기](./프로그래머스/JS_Level1/소수만들기.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/12977))
++ [k번째 수](./프로그래머스/JS_Level1/k번째수.js)([링크](https://programmers.co.kr/learn/courses/30/lessons/42748))
 
 <!-- </details> -->
 

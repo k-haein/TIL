@@ -70,5 +70,5 @@ request.setAttribute("memberDTO", memberDTO);
 // ↓ 모든 것이 성공적으로 수행되었을 경우 return 될 page
 return "blabla/blabla.jsp";
 ```
-
+우리는 따로 업로드 객체를 지원하지 않으므로, 버튼을 누르는 시점에 멀티파트 객체를 서버로 보내서 트랜잭션을 하는 로직을 따로 추가해야한다.
 <!-- 2022.03.07 -->
